@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Graphes</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Graghes des capteurs</h1>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Acceuil</a></li>
+                <li><a href="valeurs.html">Valeurs</a></li>
+            </ul>
+        </nav>
+        
+        <section>
+            <aside>
+                <h1></h1>
+                <p></p>
+            </aside>
+            <article>                
+                <h1>Graphes</h1>
+                <div id="myChart"></div>
+                <p></p>
+            </article>
+        </section>
+        
+        <footer>
+            <p>MOLLET Loïck, ISHCHUK Ekaterina<br />
+        </footer>
+        <script src="zingchart.min.js"></script>
+    </body>
+</html>
+
+<script>
+    zingchart.render({
+    id: 'myChart',
+    data:
+    {
+      "type": "line",
+      "title": {
+        "text": "Graphes"
+      },
+      "plot": {
+        "value-box": {
+          "text": "%v"
+        },
+        "tooltip": {
+          "text": "%v"
+        }
+      },
+      "legend": {
+        "toggle-action": "hide",
+        "header": {
+          "text": "Legend Header"
+        },
+        "item": {
+          "cursor": "pointer"
+        },
+        "draggable": true,
+        "drag-handler": "icon"
+      },
+      "scale-x": {
+        "values": [
+          "11:10",
+          "11:20",
+          "11:30"
+        ]
+      },
+      "series": [
+        {
+          "values": [30,60,90],
+          "text": "Capteur 1"
+        },
+        {
+            "values": [50,65,70],
+            "text": "Capteur 2"
+        },
+        {
+            "values": [50,70,90],
+            "text": "Capteur 3"
+        }
+      ]
+    }
+  });
+</script>
